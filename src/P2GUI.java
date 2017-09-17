@@ -117,29 +117,30 @@ public class P2GUI extends JFrame {
                                 insufficentFundsExcpetion.getMessage();
                             }
                         } else {
-                            JOptionPane.showMessageDialog( null,"Value cannot be Negative!!" );
+                            JOptionPane.showMessageDialog( null, "Value cannot be Negative!!" );
                         }
+                    }
                          if (reponse == 1 && (!(JFSAVIGNS.isSelected()))) {
-                            String TRANSFERBUTTONVAL2 = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
-                            if (Integer.parseInt( TRANSFERBUTTONVAL2 ) > 0) {
-                                try {
-                                    CHECKING.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL2 ) );
-                                    SAVINGS.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL2 ) );
-                                    JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL2 + " Was Transferred to " + CURRENT );
-                                } catch (NumberFormatException el) {
-                                } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
-                                    insufficentFundsExcpetion.getMessage();
-                                }
+                             String TRANSFERBUTTONVAL2 = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
+                             if (Integer.parseInt( TRANSFERBUTTONVAL2 ) > 0) {
+                                 try {
+                                     CHECKING.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL2 ) );
+                                     SAVINGS.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL2 ) );
+                                     JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL2 + " Was Transferred to " + CURRENT );
+                                 } catch (NumberFormatException el) {
+                                 } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
+                                     insufficentFundsExcpetion.getMessage();
+                                 }
 
-                            } else{
-                                JOptionPane.showMessageDialog( null,"Value cannot be Negative!!" );
-                            }
-
-                            if (reponse == 2) {
-                                JOptionPane.showMessageDialog( null, "You Have Cancelled your Transfer." );
-                            }
+                             } else {
+                                 JOptionPane.showMessageDialog( null, "Value cannot be Negative!!" );
+                             }
+                         }
+                        if (reponse == 2) {
+                            JOptionPane.showMessageDialog( null, "You Have Cancelled your Transfer." );
                         }
-                    }else {
+
+                    else {
                         JOptionPane.showMessageDialog( null, "You Cant Transfer from the same TWO accounts!! Please select a different account and continue" );
                     }
                 }

@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ec438a-d6f7-433c-9011-42fd5a484959" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$3.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$4.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$5.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$6.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$7.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/P2GUI.java" afterPath="$PROJECT_DIR$/src/P2GUI.java" />
     </list>
@@ -35,10 +41,10 @@
       <file leaf-file-name="P2GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/P2GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="137" column="28" lean-forward="false" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+            <state relative-caret-position="272">
+              <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
               <folding>
-                <element signature="e#0#10353#0" expanded="true" />
+                <element signature="e#0#10379#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -326,7 +332,7 @@
       <workItem from="1505440556620" duration="9317000" />
       <workItem from="1505626083669" duration="17528000" />
       <workItem from="1505643655336" duration="3557000" />
-      <workItem from="1505647402664" duration="2012000" />
+      <workItem from="1505647402664" duration="2338000" />
     </task>
     <task id="LOCAL-00001" summary="Classes">
       <created>1505360307314</created>
@@ -377,11 +383,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505648375633</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added bulletproofing">
+      <created>1505649424247</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1505649424247</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43119000" />
+    <option name="totallyTimeSpent" value="43445000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -474,7 +487,8 @@
     <MESSAGE value="Classes" />
     <MESSAGE value="Finished classes" />
     <MESSAGE value="Finished basic program" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished basic program" />
+    <MESSAGE value="Added bulletproofing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added bulletproofing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -492,7 +506,7 @@
         <state relative-caret-position="17">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10353#0" expanded="true" />
+            <element signature="e#0#10379#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -532,7 +546,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10353#0" expanded="true" />
+            <element signature="e#0#10379#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -561,7 +575,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10353#0" expanded="true" />
+            <element signature="e#0#10379#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -590,7 +604,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10353#0" expanded="true" />
+            <element signature="e#0#10379#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -619,7 +633,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10353#0" expanded="true" />
+            <element signature="e#0#10379#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -692,10 +706,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/P2GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="137" column="28" lean-forward="false" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+        <state relative-caret-position="272">
+          <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
           <folding>
-            <element signature="e#0#10353#0" expanded="true" />
+            <element signature="e#0#10379#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
