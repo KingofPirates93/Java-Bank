@@ -45,21 +45,28 @@ public class P2GUI extends JFrame {
 
         //ini buttons and action listeners
         //DEPOSIT BUTTON
-        JFATMDEPOSIT = new JButton( "Deposit" );
+        JFATMDEPOSIT = new JButton( "DEPOSIT" );
         JFATMDEPOSIT.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (JFCHECKING.isSelected() || JFSAVIGNS.isSelected()) {
-                    try {
-                        String DEPOSITBUTTONVAL = JOptionPane.showInputDialog( JFATMDEPOSIT, "Please Enter Amount You Want to Deposit: " );
-                        CURRENT.DEPOSIT( Double.parseDouble( DEPOSITBUTTONVAL ) );
-                        JFDISPLAY.setText( "$" + DEPOSITBUTTONVAL + " Deposited into your Account." + "\nYour Available Balance is: $" + CURRENT.getBalance());
-                    } catch (NumberFormatException e1) {
+                    String DEPOSITBUTTONVAL = JOptionPane.showInputDialog( JFATMDEPOSIT, "Please Enter Amount You Want to Deposit: " );
+                    if (Integer.parseInt( DEPOSITBUTTONVAL ) > 0) {
+                        try {
+                            CURRENT.DEPOSIT( Double.parseDouble( DEPOSITBUTTONVAL ) );
+                            JFDISPLAY.setText( "$" + DEPOSITBUTTONVAL + " Deposited into your Account." + "\nYour Available Balance is: $" + CURRENT.getBalance() );
+                        } catch (NumberFormatException e1) {
+                        }
+                    } else if (Integer.parseInt( DEPOSITBUTTONVAL ) < 0) {
+                        JOptionPane.showMessageDialog( null, "Value Cannot be Negative!!!" );
                     }
-                } else {
-                    JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
+
+
+                }
+                else { JOptionPane.showMessageDialog( null, "Please select an Account before selecting this option." );
                 }
             }
+
         } );
 
         //WITHDRAW BUTTON
@@ -68,17 +75,21 @@ public class P2GUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (JFCHECKING.isSelected() || JFSAVIGNS.isSelected()) {
-                    try {
-                        String WITHDRAWBUTTONVAL = JOptionPane.showInputDialog( JFATMWITHDRAW, "Please Enter Amount You would Like to Withdraw: " );
-                        CURRENT.WITHDRAW( Double.parseDouble( WITHDRAWBUTTONVAL ) );
-                        JFDISPLAY.setText( "You have Withdrawn: $" + WITHDRAWBUTTONVAL + "\nYour Available Balance is: $" + CURRENT.getBalance() );
+                    String WITHDRAWBUTTONVAL = JOptionPane.showInputDialog( JFATMWITHDRAW, "Please Enter Amount You would Like to Withdraw: " );
+                    if (Integer.parseInt( WITHDRAWBUTTONVAL ) > 0) {
+                        try {
+                            CURRENT.WITHDRAW( Double.parseDouble( WITHDRAWBUTTONVAL ) );
+                            JFDISPLAY.setText( "You have Withdrawn: $" + WITHDRAWBUTTONVAL + "\nYour Available Balance is: $" + CURRENT.getBalance() );
 
-                    } catch (NumberFormatException e1) { }
-                      catch (InsufficentFundsExcpetion el) {
-                        JFDISPLAY.setText( el.getMessage() );
+                        } catch (NumberFormatException e1) {
+                        } catch (InsufficentFundsExcpetion el) {
+                            JFDISPLAY.setText( el.getMessage() );
+                        }
+                    } else if (Integer.parseInt( WITHDRAWBUTTONVAL ) < 0) {
+                        JOptionPane.showMessageDialog( null, "Value Cannot be Negative!!!" );
                     }
-                } else {
-                    JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
+                }
+                else {JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
                 }
             }
 
