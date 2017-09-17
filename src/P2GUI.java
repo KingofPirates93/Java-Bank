@@ -105,36 +105,50 @@ public class P2GUI extends JFrame {
                     int reponse = JOptionPane.showOptionDialog( null, "Please Select an Option to TRANSFER MONEY TO", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, OPTIONS, OPTIONS[0] );
                     //bulletproofing selections
                     if (reponse == 0 && (!(JFCHECKING.isSelected()))) {
-                        try {
-                            String TRANSFERBUTTONVAL = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
-                            SAVINGS.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                            CHECKING.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                            JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL + " Was Transferred to " + JFCHECKING.getName() );
+                        String TRANSFERBUTTONVAL = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
+                        if (Integer.parseInt( TRANSFERBUTTONVAL ) > 0) {
+                            try {
+                                SAVINGS.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL ) );
+                                CHECKING.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL ) );
+                                JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL + " Was Transferred to " + JFCHECKING.getName() );
 
-                        } catch (NumberFormatException e1) {
-                        } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
-                            insufficentFundsExcpetion.getMessage();
+                            } catch (NumberFormatException e1) {
+                            } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
+                                insufficentFundsExcpetion.getMessage();
+                            }
+                        } else {
+                            JOptionPane.showMessageDialog( null,"Value cannot be Negative!!" );
                         }
-                    } else if (reponse == 1 && (!(JFSAVIGNS.isSelected()))) {
-                        try {
-                            String TRANSFERBUTTONVAL = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
-                            CHECKING.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                            SAVINGS.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                            JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL + " Was Transferred to " + CURRENT );
-                        } catch (NumberFormatException el) {
-                        } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
-                            insufficentFundsExcpetion.getMessage();
+                         if (reponse == 1 && (!(JFSAVIGNS.isSelected()))) {
+                            String TRANSFERBUTTONVAL2 = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
+                            if (Integer.parseInt( TRANSFERBUTTONVAL2 ) > 0) {
+                                try {
+                                    CHECKING.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL2 ) );
+                                    SAVINGS.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL2 ) );
+                                    JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL2 + " Was Transferred to " + CURRENT );
+                                } catch (NumberFormatException el) {
+                                } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
+                                    insufficentFundsExcpetion.getMessage();
+                                }
+
+                            } else{
+                                JOptionPane.showMessageDialog( null,"Value cannot be Negative!!" );
+                            }
+
+                            if (reponse == 2) {
+                                JOptionPane.showMessageDialog( null, "You Have Cancelled your Transfer." );
+                            }
                         }
-                    } else if (reponse == 2) {
-                        JOptionPane.showMessageDialog( null, "You Have Cancelled your Transfer." );
-                    } else {
+                    }else {
                         JOptionPane.showMessageDialog( null, "You Cant Transfer from the same TWO accounts!! Please select a different account and continue" );
                     }
-                } else {
-                    JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
                 }
+                else{
+                    JOptionPane.showMessageDialog( null, "Please select an Account before selecting this option." );
+                }
+
             }
-        } );
+        });
 
         //SHOW BALANCE BUTTON
         JFBALANCE = new JButton( "SHOW BALANCE" );

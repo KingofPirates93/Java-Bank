@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56ec438a-d6f7-433c-9011-42fd5a484959" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$1.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$2.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$3.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$4.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$5.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$6.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$7.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java Bank/P2GUI.class" afterPath="$PROJECT_DIR$/out/production/Java Bank/P2GUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/P2GUI.java" afterPath="$PROJECT_DIR$/src/P2GUI.java" />
     </list>
@@ -43,10 +35,10 @@
       <file leaf-file-name="P2GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/P2GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="47" column="44" lean-forward="false" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+            <state relative-caret-position="155">
+              <caret line="137" column="28" lean-forward="false" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
               <folding>
-                <element signature="e#0#9705#0" expanded="true" />
+                <element signature="e#0#10353#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -179,6 +171,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -333,7 +326,7 @@
       <workItem from="1505440556620" duration="9317000" />
       <workItem from="1505626083669" duration="17528000" />
       <workItem from="1505643655336" duration="3557000" />
-      <workItem from="1505647402664" duration="964000" />
+      <workItem from="1505647402664" duration="2012000" />
     </task>
     <task id="LOCAL-00001" summary="Classes">
       <created>1505360307314</created>
@@ -377,11 +370,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505647145294</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finished basic program">
+      <created>1505648375633</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1505648375633</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42071000" />
+    <option name="totallyTimeSpent" value="43119000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -409,7 +409,9 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.120469086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -423,7 +425,6 @@
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +492,7 @@
         <state relative-caret-position="17">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9705#0" expanded="true" />
+            <element signature="e#0#10353#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -531,7 +532,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9705#0" expanded="true" />
+            <element signature="e#0#10353#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -560,7 +561,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9705#0" expanded="true" />
+            <element signature="e#0#10353#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -589,7 +590,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9705#0" expanded="true" />
+            <element signature="e#0#10353#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -618,7 +619,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9705#0" expanded="true" />
+            <element signature="e#0#10353#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -691,10 +692,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/P2GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="47" column="44" lean-forward="false" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+        <state relative-caret-position="155">
+          <caret line="137" column="28" lean-forward="false" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
           <folding>
-            <element signature="e#0#9705#0" expanded="true" />
+            <element signature="e#0#10353#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
