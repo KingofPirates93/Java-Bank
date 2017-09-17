@@ -1,6 +1,5 @@
 public class Account {
-<<<<<<< Updated upstream
-=======
+
     private double balance;
     private final double FEE_SURCHARGE = 1.50;//$1.50 fee
 
@@ -27,5 +26,5 @@ public class Account {
             System.err.println( "Error with Account, Please see teller." );
         }
     }
->>>>>>> Stashed changes
+
 }

@@ -1,9 +1,3 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;<<<<<<< Updated upstream
-public class P2GUI {
-=======
 /**
  * Program: Java Bank
  * Package: Default
@@ -56,12 +50,20 @@ public class P2GUI extends JFrame {
         JFATMDEPOSIT.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String DEPOSITBUTTONVAL = JOptionPane.showInputDialog( JFATMDEPOSIT, "Please Enter Amount You Want to Deposit: " );
-                try {
-                    CURRENT.DEPOSIT( Double.parseDouble( DEPOSITBUTTONVAL ) );
-                    JFDISPLAY.setText( "$" + DEPOSITBUTTONVAL + " Deposited into your " + CURRENT + " Account." );
-                }catch (NumberFormatException e1){}
+                if (JFCHECKING.isSelected() || JFSAVIGNS.isSelected()) {
 
+
+                    try {
+                        String DEPOSITBUTTONVAL = JOptionPane.showInputDialog( JFATMDEPOSIT, "Please Enter Amount You Want to Deposit: " );
+                        CURRENT.DEPOSIT( Double.parseDouble( DEPOSITBUTTONVAL ) );
+                        JFDISPLAY.setText( "$" + DEPOSITBUTTONVAL + " Deposited into your " + CURRENT + " Account." );
+                    } catch (NumberFormatException e1) {
+                    }
+
+
+                } else {
+                    JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
+                }
             }
         } );
 
@@ -70,12 +72,19 @@ public class P2GUI extends JFrame {
         JFATMWITHDRAW.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String WITHDRAWBUTTONVAL = JOptionPane.showInputDialog( JFATMWITHDRAW, "Please Enter Amount You would Like to Withdraw: " );
-                try {
-                    CURRENT.WITHDRAW( Double.parseDouble( WITHDRAWBUTTONVAL ) );
+                if (JFCHECKING.isSelected() || JFSAVIGNS.isSelected()) {
+                    try {
+                        String WITHDRAWBUTTONVAL = JOptionPane.showInputDialog( JFATMWITHDRAW, "Please Enter Amount You would Like to Withdraw: " );
+                        CURRENT.WITHDRAW( Double.parseDouble( WITHDRAWBUTTONVAL ) );
+                        JFDISPLAY.setText( "You have Withdrawn: $" + WITHDRAWBUTTONVAL );
 
-                } catch (NumberFormatException e1) {
-                } catch (InsufficentFundsExcpetion el) {}
+                    } catch (NumberFormatException e1) { }
+                      catch (InsufficentFundsExcpetion el) {
+                        JFDISPLAY.setText( el.getMessage() );
+                    }
+                } else {
+                    JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
+                }
             }
 
         } );
@@ -85,33 +94,38 @@ public class P2GUI extends JFrame {
         JFTRANSFER.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String[] OPTIONS = new String[]{"Checking", "Savings", "CANCEL"};
-                int reponse = JOptionPane.showOptionDialog( null,"Please Select an Option to TRANSFER MONEY TO",null, JOptionPane.DEFAULT_OPTION,JOptionPane.PLAIN_MESSAGE,null,OPTIONS,OPTIONS[0] );
-                //bulletproofing selections
-                if (reponse == 0 && (!(JFCHECKING.isSelected()))) {
-                    try {
-                        String TRANSFERBUTTONVAL = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
-                        SAVINGS.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                        CHECKING.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                        JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL + " Was Transferred to " + CURRENT );
+                if (JFCHECKING.isSelected() || JFSAVIGNS.isSelected()) {
+                    String[] OPTIONS = new String[]{"Checking", "Savings", "CANCEL"};
+                    int reponse = JOptionPane.showOptionDialog( null, "Please Select an Option to TRANSFER MONEY TO", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, OPTIONS, OPTIONS[0] );
+                    //bulletproofing selections
+                    if (reponse == 0 && (!(JFCHECKING.isSelected()))) {
+                        try {
+                            String TRANSFERBUTTONVAL = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
+                            SAVINGS.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL ) );
+                            CHECKING.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL ) );
+                            JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL + " Was Transferred to " + JFCHECKING.getName() );
 
-                    } catch (NumberFormatException e1) {
-                    } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
-                        insufficentFundsExcpetion.printStackTrace();
+                        } catch (NumberFormatException e1) {
+                        } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
+                            insufficentFundsExcpetion.getMessage();
+                        }
+                    } else if (reponse == 1 && (!(JFSAVIGNS.isSelected()))) {
+                        try {
+                            String TRANSFERBUTTONVAL = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
+                            CHECKING.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL ) );
+                            SAVINGS.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL ) );
+                            JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL + " Was Transferred to " + CURRENT );
+                        } catch (NumberFormatException el) {
+                        } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
+                            insufficentFundsExcpetion.getMessage();
+                        }
+                    } else if (reponse == 2) {
+                        JOptionPane.showMessageDialog( null, "You Have Cancelled your Transfer." );
+                    } else {
+                        JOptionPane.showMessageDialog( null, "You Cant Transfer from the same TWO accounts!! Please select a different account and continue" );
                     }
-                } else if (reponse == 1 && (!(JFSAVIGNS.isSelected()))) {
-                    try {
-                        String TRANSFERBUTTONVAL = JOptionPane.showInputDialog( JFTRANSFER, "Please Enter Amount You Would Like to Transfer " );
-                        CHECKING.WITHDRAW( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                        SAVINGS.DEPOSIT( Double.parseDouble( TRANSFERBUTTONVAL ) );
-                        JFDISPLAY.setText( "$" + TRANSFERBUTTONVAL + " Was Transferred to " + CURRENT );
-                    } catch (NumberFormatException el) {
-                    } catch (InsufficentFundsExcpetion insufficentFundsExcpetion) {
-                    }
-                } else if (reponse == 2) {
-                    JOptionPane.showMessageDialog( null,"You Have Cancelled your Transfer." );
                 } else {
-                    JOptionPane.showMessageDialog( null, "You Cant Transfer from the same TWO accounts!! Please select a different account and continue" );
+                    JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
                 }
             }
         } );
