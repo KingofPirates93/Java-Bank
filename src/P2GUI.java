@@ -40,9 +40,9 @@ public class P2GUI extends JFrame {
     private void createView() {
 
         //ini accounts
-        CHECKING = new Account( 1250 );
-        SAVINGS = new Account( 3500 );
-        CURRENT = new Account( 0 );
+        CHECKING = new Account( 1250,0 );
+        SAVINGS = new Account( 3500,0 );
+        CURRENT = new Account( 0,0 );
 
         //ini buttons and action listeners
         //DEPOSIT BUTTON
@@ -51,16 +51,12 @@ public class P2GUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (JFCHECKING.isSelected() || JFSAVIGNS.isSelected()) {
-
-
                     try {
                         String DEPOSITBUTTONVAL = JOptionPane.showInputDialog( JFATMDEPOSIT, "Please Enter Amount You Want to Deposit: " );
                         CURRENT.DEPOSIT( Double.parseDouble( DEPOSITBUTTONVAL ) );
-                        JFDISPLAY.setText( "$" + DEPOSITBUTTONVAL + " Deposited into your " + CURRENT + " Account." );
+                        JFDISPLAY.setText( "$" + DEPOSITBUTTONVAL + " Deposited into your Account." + "\nYour Available Balance is: $" + CURRENT.getBalance());
                     } catch (NumberFormatException e1) {
                     }
-
-
                 } else {
                     JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
                 }
@@ -76,7 +72,7 @@ public class P2GUI extends JFrame {
                     try {
                         String WITHDRAWBUTTONVAL = JOptionPane.showInputDialog( JFATMWITHDRAW, "Please Enter Amount You would Like to Withdraw: " );
                         CURRENT.WITHDRAW( Double.parseDouble( WITHDRAWBUTTONVAL ) );
-                        JFDISPLAY.setText( "You have Withdrawn: $" + WITHDRAWBUTTONVAL );
+                        JFDISPLAY.setText( "You have Withdrawn: $" + WITHDRAWBUTTONVAL + "\nYour Available Balance is: $" + CURRENT.getBalance() );
 
                     } catch (NumberFormatException e1) { }
                       catch (InsufficentFundsExcpetion el) {
@@ -135,12 +131,16 @@ public class P2GUI extends JFrame {
         JFBALANCE.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFDISPLAY.setText( String.valueOf("Your Current Balance is: $" + CURRENT.getBalance() ) );
+                if (JFCHECKING.isSelected() || JFSAVIGNS.isSelected()) {
+                    JFDISPLAY.setText( String.valueOf( "Your Current Balance is: $" + CURRENT.getBalance() ) );
+                } else {
+                    JOptionPane.showMessageDialog( null,"Please select an Account before selecting this option." );
+                }
             }
         } );
 
         // SAVINGS RADIO BUTTON
-        JFSAVIGNS = new JRadioButton( "SAVINGS" );
+        JFSAVIGNS = new JRadioButton( "SAVINGS ACCOUNT" );
         JFSAVIGNS.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -153,7 +153,7 @@ public class P2GUI extends JFrame {
         } );
 
         //CHECKING RADIO BUTTON
-        JFCHECKING = new JRadioButton( "CHECKINGS" );
+        JFCHECKING = new JRadioButton( "CHECKING ACCOUNT" );
         JFCHECKING.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -200,13 +200,6 @@ public class P2GUI extends JFrame {
         JFDISPLAY.setWrapStyleWord( true );
         JFPANEL.add( JFDISPLAY , BorderLayout.SOUTH);
         pack();
-
-
-
-
-
-
-
     }
 
 
